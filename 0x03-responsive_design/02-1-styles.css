@@ -1,0 +1,123 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 0 1rem;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Latest News Section */
+.section-latest-news .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-latest-news article {
+    width: 45%;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Grid Section */
+.grid-section ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-section .col-1-3 {
+    width: 30%;
+    background-color: #eaeaea;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Helpers: Target images inside the main section */
+main img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+
+/* For devices with a max-width of 767px (Tablets) */
+@media (max-width: 767px) {
+    /* Latest News Section */
+    .section-latest-news .row {
+        flex-direction: column;
+    }
+
+    /* Grid Section */
+    :root {
+        --section-padding: 5rem 1.5rem;
+        --section-body-padding: 2rem 0 0;
+    }
+
+    .grid-section ul.row {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .grid-section .col-1-3,
+    .grid-section .col-1-2 {
+        width: 100%;
+    }
+
+    .grid-section .col-1-3 {
+        margin: 0 0 3rem 0;
+    }
+
+    /* Navbar Section */
+    .navbar-menu {
+        display: none;
+    }
+}
+
+/* For mobile devices with a max-width of 480px (Mobile) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .section-latest-news .row {
+        flex-direction: column;
+    }
+
+    .grid-section .col-1-3 {
+        width: 100%;
+    }
+}

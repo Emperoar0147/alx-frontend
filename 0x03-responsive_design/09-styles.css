@@ -1,0 +1,23 @@
+/* Footer section */
+.footer {
+    padding: var(--footer-padding);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Other footer styles */
+
+@media (max-width: 767px) {
+    :root {
+        --footer-padding: 5rem 2rem 1rem; /* Override footer padding */
+    }
+
+    .footer {
+        text-align: center; /* Center text in footer */
+    }
+
+    .footer .social.nav li + li, /* Adjacent li selector for .social.nav */
+    .footer .footer-nav li + li { /* Adjacent li selector for .footer-nav */
+        padding-left: 2rem; /* Add left padding to second li and onward */
+    }
+}

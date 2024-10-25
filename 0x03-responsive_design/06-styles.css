@@ -1,0 +1,94 @@
+/* Global styles */
+:root {
+    --color-black: #000000; /* Define the color-black variable */
+    --color-white: #ffffff; /* Define the color-white variable */
+}
+
+/* Menu btn section */
+.menu-btn {
+    display: none; /* Hide the checkbox */
+}
+
+/* Navbar menu visibility based on menu-btn state */
+.navbar-menu {
+    display: none; /* Initially hide the menu */
+}
+
+.menu-btn:checked + .menu-icon + .navbar-menu {
+    display: block; /* Show menu when checked */
+}
+
+/* Navbar styles when the menu-btn is checked */
+.menu-btn:checked + .menu-icon + .navbar-menu nav {
+    max-height: 100%; /* Set max-height to allow visibility */
+    overflow: inherit; /* Inherit overflow settings */
+}
+
+/* Styles for the hamburger icon when checked */
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent; /* Change background to transparent */
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg); /* Rotate top bar */
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg); /* Rotate bottom bar */
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::before,
+.menu-btn:checked ~ .menu-icon .navicon::after {
+    top: 0; /* Center pseudo-elements */
+}
+
+/* Hero section styles for mobile */
+@media (max-width: 767px) {
+    .section-hero {
+        margin: -0.1rem 0; /* Adjust margin */
+    }
+    
+    .hero-homepage {
+        background-position: 85% 0; /* Adjust background position */
+    }
+    
+    .section-body {
+        padding: 2rem; /* Adjust padding */
+    }
+
+    /* Header styles */
+    :root {
+        --header-padding: 2rem 0 0; /* Redefine header-padding */
+    }
+    
+    header {
+        background: var(--color-black); /* Set header background */
+    }
+    
+    .header-container {
+        flex-wrap: wrap; /* Allow flex items to wrap */
+        padding: 0 1.5rem; /* Set padding */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+}
+
+/* Adjust header-logo for different screen sizes */
+@media (max-width: 480px) {
+    .header-logo {
+        flex-basis: 70%; /* Adjust flex-basis */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header-logo {
+        flex-basis: 79%; /* Adjust flex-basis */
+    }
+}
+
+/* Hide menu icon on desktop */
+.header .menu-icon {
+    display: none; /* Hide the menu icon in desktop mode */
+}

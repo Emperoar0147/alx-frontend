@@ -1,0 +1,103 @@
+/* 100-styles.css */
+
+/* Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    color: white;
+}
+
+.header .navbar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header .nav-item {
+    margin: 0 15px;
+}
+
+/* Hero Section */
+.section-hero {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    color: white;
+    font-size: 2.5em;
+}
+
+/* Article Styles */
+.main-article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-content {
+    flex: 1;
+    min-width: 300px; /* Ensures the content area doesn't shrink too much */
+}
+
+.post-aside {
+    flex: 0 0 300px; /* Fixed width for the aside */
+    padding-left: 20px;
+}
+
+/* Comment Section */
+.post-comments {
+    margin-top: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header .navbar-menu {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 2em; /* Adjusts font size for smaller screens */
+    }
+
+    .post {
+        flex-direction: column; /* Stack the post content and aside */
+    }
+
+    .post-aside {
+        flex: none; /* Reset fixed width on smaller screens */
+        padding-left: 0; /* Remove padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5em; /* Further adjust font size */
+    }
+
+    .post-meta-list {
+        flex-direction: column; /* Stack meta information on smaller screens */
+    }
+}

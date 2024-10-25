@@ -1,0 +1,39 @@
+/* Other CSS rules above... */
+
+/* Card WORK */
+.card-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.card-inner {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: calc(33.33% - 2rem);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    opacity: 0.8; /* Default opacity */
+}
+
+/* Media query for improving the Works section on smaller screens */
+@media (max-width: 767px) {
+    .card-work .card-inner {
+        --text-color: var(--color-white);
+        position: relative;
+    }
+
+    .card-work .card-title {
+        opacity: 1; /* Fully visible on smaller screens */
+    }
+
+    .card-work .card-title a {
+        padding: 2rem 1rem 0 1rem; /* Increased padding */
+    }
+}

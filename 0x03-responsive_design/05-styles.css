@@ -1,0 +1,48 @@
+/* Global styles */
+:root {
+    --color-white: #ffffff; /* Define the color-white variable */
+}
+
+/* Navbar section */
+.menu-icon {
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 2.5rem; /* Padding around the menu icon */
+    position: relative; /* Set position relative for positioning children */
+    user-select: none; /* Prevent text selection */
+}
+
+.navicon {
+    background: var(--color-white); /* Use color-white variable */
+    display: block; /* Make it a block element */
+    width: 2rem; /* Width of the navicon bar */
+    height: 0.2rem; /* Height of the navicon bar */
+    position: relative; /* Position for child elements */
+    transition: background .2s ease-out; /* Smooth background transition */
+}
+
+/* Pseudo elements for the hamburger icon */
+.navicon::before,
+.navicon::after {
+    content: ""; /* Create empty pseudo-elements */
+    display: block; /* Make it a block element */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    position: absolute; /* Position absolutely */
+    background: var(--color-white); /* Use color-white variable */
+    transition: all .2s ease-out; /* Smooth transition for all properties */
+}
+
+/* Positioning for the pseudo-elements */
+.navicon::before {
+    top: 0.7rem; /* Position the top bar */
+}
+
+.navicon::after {
+    top: -0.7rem; /* Position the bottom bar */
+}
+
+/* Mobile Navbar styles */
+@media (max-width: 767px) {
+    /* Existing styles for the mobile layout */
+    /* Include any other necessary styles you have from previous tasks */
+}

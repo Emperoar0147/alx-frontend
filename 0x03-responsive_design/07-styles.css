@@ -1,0 +1,31 @@
+/* Base styles */
+html {
+    font-size: 62.5%; /* Default font size, equivalent to 10px if 1rem = 16px */
+}
+
+/* Media query for max-width: 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 57%; /* Change font size to 9.12px (1rem = 9.12px) */
+    }
+}
+
+/* Media query for min-width: 481px and max-width: 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    html {
+        font-size: 60%; /* Change font size to 9.6px (1rem = 9.6px) */
+    }
+}
+
+/* Example styles for headings and paragraphs */
+h1 {
+    font-size: 2.4rem; /* 24px on default */
+}
+
+h2 {
+    font-size: 2rem; /* 20px on default */
+}
+
+p {
+    font-size: 1.6rem; /* 16px on default */
+}

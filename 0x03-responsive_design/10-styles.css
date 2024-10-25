@@ -1,0 +1,9 @@
+/* Section HERO section */
+.article-page .section-hero {
+    margin-top: -8.5rem; /* Adjust margin to overlap header */
+    padding-top: 5rem; /* Add padding to ensure content is visible */
+}
+
+/* Other existing styles... */
+
+/* Media queries */

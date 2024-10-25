@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    /* Changed from fixed width to max-width */
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    /* Flexibility with screen size */
+    width: 100%; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+}

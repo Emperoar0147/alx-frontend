@@ -1,0 +1,63 @@
+/* Global styles */
+:root {
+    --nav-item-margin: 1rem; /* Default value */
+}
+
+/* Navbar section */
+.navbar-menu {
+    display: flex;
+    flex-direction: column; /* Change the layout to vertical */
+    overflow: hidden;
+    max-height: 0; /* Start hidden */
+    transition: max-height .2s ease-out; /* Smooth transition */
+}
+
+/* Mobile Navbar styles */
+@media (max-width: 767px) {
+    :root {
+        --nav-item-margin: 0; /* Override variable for mobile */
+    }
+
+    .navbar-menu {
+        flex: 1; /* Allow the navbar to take available space */
+    }
+
+    /* When the checkbox is checked, display the menu */
+    .menu-btn:checked + .menu-icon + .navbar-menu {
+        max-height: 500px; /* Set to a value that accommodates your menu items */
+    }
+
+    /* Styling for the menu icon */
+    .menu-icon {
+        cursor: pointer; /* Change cursor to pointer */
+        display: inline-block; /* Allow it to be clickable */
+    }
+
+    .navicon {
+        /* Add styles for the icon */
+        display: block;
+        width: 30px; /* Width of the icon */
+        height: 3px; /* Height of the icon bar */
+        background-color: black; /* Color of the icon bar */
+        position: relative;
+    }
+
+    .navicon::before,
+    .navicon::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: black; /* Color of the icon bars */
+        position: absolute;
+        left: 0;
+    }
+
+    .navicon::before {
+        top: -8px; /* Positioning the top bar */
+    }
+
+    .navicon::after {
+        bottom: -8px; /* Positioning the bottom bar */
+    }
+}
